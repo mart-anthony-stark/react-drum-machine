@@ -139,8 +139,15 @@ export default function App() {
           ))}
         </div>
         <div id="controls">
-          <button className="toggle" onClick={() => handleToggle()}>
-            <div className="circle"></div>
+          <button
+            className={`toggle`}
+            onClick={() => {
+              handleToggle();
+              if (toggle) setToggle(false);
+              else setToggle(true);
+            }}
+          >
+            <div className={`circle  ${toggle && 'toggled'}`}></div>
           </button>
         </div>
       </div>

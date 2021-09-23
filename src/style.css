@@ -46,7 +46,7 @@
 }
 .toggle {
   height: 30px;
-  width: 80px;
+  width: 70px;
   background: white;
   cursor: pointer;
   border-radius: 25px;
@@ -57,9 +57,12 @@
   position: absolute;
   height: 100%;
   width: 50%;
-  background: rgb(0, 140, 255);
+  background: rgb(0, 255, 85);
   top: 0;
   left: 0;
   border-radius: 50%;
   transition: 0.5s ease;
+}
+.circle.toggled {
+  transform: translateX(100%);
 }
