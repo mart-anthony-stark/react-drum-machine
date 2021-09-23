@@ -63,7 +63,7 @@ export default function App() {
   const [setA, toggleSet] = useState(bankOne);
   useEffect(() => toggleSet(bankOne), []);
   return (
-    <div>
+    <div className="container">
       <div id="drum-machine">
         <div id="display">
           {setA.map((pad) => (
