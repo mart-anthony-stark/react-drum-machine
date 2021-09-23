@@ -117,6 +117,7 @@ const bankTwo = [
 
 export default function App() {
   const [bank, toggleSet] = useState(bankTwo);
+  const [toggle, setToggle] = useState(false);
 
   function handleToggle() {
     if (bank == bankOne) toggleSet(bankTwo);
@@ -139,7 +140,7 @@ export default function App() {
         </div>
         <div id="controls">
           <button className="toggle" onClick={() => handleToggle()}>
-            Toggle
+            <div className="circle"></div>
           </button>
         </div>
       </div>
