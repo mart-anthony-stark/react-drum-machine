@@ -22,7 +22,7 @@ export default function Tile({ name, keyTrigger, keyCode, url }) {
   }
   return (
     <div
-      className={`drum-pad ${active && 'playing'}`}
+      className={active?'drum-pad playing':'drum-pad'}
       id={name}
       onClick={playSound}
     >

@@ -20,6 +20,7 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 100px);
+  margin-bottom: 35px;
 }
 .drum-pad {
   background: rgba(105, 101, 101, 0.2);
@@ -31,6 +32,8 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  gap: 15px;
+  text-align: center;
   color: #fff;
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
   user-select: none;
