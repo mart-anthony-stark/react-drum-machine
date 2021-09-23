@@ -1,0 +1,8 @@
+h1,
+p {
+  font-family: Lato;
+}
+textarea {
+  min-height: 200px;
+  font-size: 2em;;
+}
