@@ -118,17 +118,18 @@ const bankTwo = [
 export default function App() {
   const [bank, toggleSet] = useState(bankTwo);
 
-  function handleToggle(){
-    if(bank == bankOne) toggleSet(bankTwo)
-    else if(bank == bankTwo) toggleSet(bankOne)
+  function handleToggle() {
+    if (bank == bankOne) toggleSet(bankTwo);
+    else if (bank == bankTwo) toggleSet(bankOne);
   }
   return (
     <div className="container">
+      <h3 className="title">Drum Pads</h3>
       <div id="drum-machine">
         <div id="display">
           {bank.map((pad) => (
             <Tile
-              name
+              name={pad.id}
               key={pad.id}
               keyCode={pad.keyCode}
               keyTrigger={pad.keyTrigger}
@@ -137,7 +138,9 @@ export default function App() {
           ))}
         </div>
         <div id="controls">
-          <button className="toggle" onClick={()=> handleToggle()}>Toggle</button>
+          <button className="toggle" onClick={() => handleToggle()}>
+            Toggle
+          </button>
         </div>
       </div>
     </div>

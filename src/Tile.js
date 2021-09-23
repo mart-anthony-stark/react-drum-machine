@@ -15,7 +15,6 @@ export default function Tile({ name, keyTrigger, keyCode, url }) {
 
   function playSound() {
     const audioTag = document.getElementById(keyTrigger);
-    const pad = document.getElementById(name);
     audioTag.currentTime = 0;
     audioTag.play();
     setActive(true);
@@ -30,6 +29,7 @@ export default function Tile({ name, keyTrigger, keyCode, url }) {
       <audio src={url} id={keyTrigger} className="clip" />
       <h4 className="name">{name}</h4>
       <p className="key-trigger">{keyTrigger}</p>
+      <p className="pad-name">{name}</p>
     </div>
   );
 }
