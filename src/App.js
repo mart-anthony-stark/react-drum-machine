@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import './style.css';
 
 export default function App() {
-  const [markdown, setMarkdown] = useState('as');
+  const [, setMarkdown] = useState({
 
-  return <div></div>;
+  });
+
+  return (<div>
+
+  </div>);
 }
