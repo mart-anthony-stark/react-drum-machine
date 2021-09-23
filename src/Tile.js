@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 export default function Tile({ name, keyTrigger, keyCode, url }) {
   useEffect(() => {
-    document.addEventListener('keydown', () => handleKeypress);
+    document.addEventListener('keydown', (e) => {
+      if (e.keyCode == keyCode) playSound();
+    });
     return () => {
-      document.removeEventListener('keydown', () => handleKeypress);
+      document.removeEventListener('keydown', () => (e) => {
+        if (e.keyCode == keyCode) playSound();
+      });
     };
   }, []);
 
@@ -12,7 +16,6 @@ export default function Tile({ name, keyTrigger, keyCode, url }) {
     const audioTag = document.getElementById(keyTrigger);
     audioTag.currentTime = 0;
     audioTag.play();
-    console.log(keyTrigger);
   }
   return (
     <div className="drum-pad" id={name} onClick={playSound}>
