@@ -7,6 +7,10 @@ export default function App() {
   });
 
   return (<div>
-
+    <div id="drum-machine">
+      <div id="display">
+        
+      </div>
+    </div>
   </div>);
 }
