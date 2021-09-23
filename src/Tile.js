@@ -19,7 +19,7 @@ export default function Tile({ name, keyTrigger, keyCode, url }) {
     audioTag.currentTime = 0;
     audioTag.play();
     setActive(true);
-    // setTimeout(setActive(false), 1000);
+    setTimeout(() => setActive(false), 200);
   }
   return (
     <div
