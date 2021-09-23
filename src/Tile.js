@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Tile({ name, keyTrigger, keyCode, url }) {
+  useEffect(() => {
+    document.addEventListener('keydown', () => handleKeypress);
+    return () => {
+      document.removeEventListener('keydown', () => handleKeypress);
+    };
+  }, []);
+
   function playSound() {
     const audioTag = document.getElementById(keyTrigger);
     audioTag.currentTime = 0;
