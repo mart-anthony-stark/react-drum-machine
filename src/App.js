@@ -62,6 +62,7 @@ const bankOne = [
 export default function App() {
   const [setA, toggleSet] = useState(bankOne);
   useEffect(() => toggleSet(bankOne), []);
+
   return (
     <div className="container">
       <div id="drum-machine">

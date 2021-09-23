@@ -26,6 +26,7 @@
   cursor: pointer;
   color: #fff;
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+  user-select: none;
 }
 /* .drum-pad:hover{
   background: rgb(0, 255, 255);
