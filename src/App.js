@@ -72,7 +72,7 @@ export default function App() {
               key={pad.id}
               keyCode={pad.keyCode}
               keyTrigger={pad.keyTrigger}
-              url={pad.ur}
+              url={pad.url}
             />
           ))}
         </div>
