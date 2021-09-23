@@ -3,7 +3,7 @@ import Tile from './Tile';
 import './style.css';
 
 export default function App() {
-  const [, setMarkdown] = useState(bankOne);
+  const [setA, toggleSet] = useState(bankOne);
 
   var bankOne = [
     {
@@ -66,10 +66,9 @@ export default function App() {
     <div>
       <div id="drum-machine">
         <div id="display">
-          <Tile name="Snare" key="w" />
-          <Tile name="Snare" key="w" />
-          <Tile name="Snare" key="w" />
-          <Tile name="Snare" key="w" />
+          {
+            setA.map(pad => (<Tile name key={pad.id}/>))
+          }
         </div>
       </div>
     </div>
